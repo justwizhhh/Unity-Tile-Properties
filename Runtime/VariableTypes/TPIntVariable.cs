@@ -1,40 +1,43 @@
 using System;
 using UnityEngine;
 
-[System.Serializable]
-public struct TPIntVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public int Value;
-
-    public string GetVariableTypeName()
+    [System.Serializable]
+    public struct TPIntVariable : TPVariableType
     {
-        return "Integer";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return 0;
-    }
+        [SerializeField] public int Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "Integer";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return 0;
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = Convert.ToInt16(new_value);
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = Convert.ToInt16(new_value);
+        }
     }
 }

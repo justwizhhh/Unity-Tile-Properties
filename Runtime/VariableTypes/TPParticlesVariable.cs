@@ -1,39 +1,42 @@
 using UnityEngine;
 
-[System.Serializable]
-public struct TPParticlesVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public ParticleSystem Value;
-
-    public string GetVariableTypeName()
+    [System.Serializable]
+    public struct TPParticlesVariable : TPVariableType
     {
-        return "ParticleSystem";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return null;
-    }
+        [SerializeField] public ParticleSystem Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "ParticleSystem";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return null;
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = (ParticleSystem)new_value;
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = (ParticleSystem)new_value;
+        }
     }
 }

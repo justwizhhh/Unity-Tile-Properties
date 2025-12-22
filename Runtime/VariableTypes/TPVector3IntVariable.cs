@@ -1,38 +1,41 @@
 using UnityEngine;
 
-public struct TPVector3IntVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public Vector3Int Value;
-
-    public string GetVariableTypeName()
+    public struct TPVector3IntVariable : TPVariableType
     {
-        return "Vector3Int";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return new Vector3Int(0, 0);
-    }
+        [SerializeField] public Vector3Int Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "Vector3Int";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return new Vector3Int(0, 0);
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = (Vector3Int)new_value;
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = (Vector3Int)new_value;
+        }
     }
 }

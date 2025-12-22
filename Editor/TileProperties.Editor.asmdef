@@ -1,3 +1,18 @@
 {
-	"name": "TileProperties.Editor"
+    "name": "TileProperties.Editor",
+    "rootNamespace": "TileProperties.Editor",
+    "references": [
+        "GUID:5253ef640466f50458bb0172e470499f",
+        "GUID:69448af7b92c7f342b298e06a37122aa",
+        "GUID:84651a3751eca9349aac36a66bba901b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

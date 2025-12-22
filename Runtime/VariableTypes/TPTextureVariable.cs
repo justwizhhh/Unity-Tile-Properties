@@ -1,39 +1,42 @@
 using UnityEngine;
 
-[System.Serializable]
-public struct TPTextureVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public Texture Value;
-
-    public string GetVariableTypeName()
+    [System.Serializable]
+    public struct TPTextureVariable : TPVariableType
     {
-        return "Texture";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return null;
-    }
+        [SerializeField] public Texture Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "Texture";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return null;
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = (Texture)new_value;
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = (Texture)new_value;
+        }
     }
 }

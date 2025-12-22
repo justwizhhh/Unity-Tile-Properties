@@ -2,27 +2,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu(fileName = "NewTilePropertyList", menuName = "2D/Tile Property List", order = 4)]
-[System.Serializable]
-public class TilePropertiesList : ScriptableObject
+namespace TileProperties
 {
-    public List<TileBase> AffectedTiles = new List<TileBase>();
+    [CreateAssetMenu(fileName = "NewTilePropertyList", menuName = "2D/Tile Property List", order = 4)]
+    [System.Serializable]
 
-    [SerializeReference]
-    private List<TPVariableType> tileProperties;
-    public List<TPVariableType> TileProperties
+    public class TilePropertiesList : ScriptableObject
     {
-        get 
-        {
-            if (tileProperties == null)
-            {
-                tileProperties = new List<TPVariableType>();
-            }
-            return tileProperties;
-        }
-        set
-        {
+        public List<TileBase> AffectedTiles = new List<TileBase>();
 
+        [SerializeReference]
+        private List<TPVariableType> tileProperties;
+        public List<TPVariableType> TileProperties
+        {
+            get
+            {
+                if (tileProperties == null)
+                {
+                    tileProperties = new List<TPVariableType>();
+                }
+                return tileProperties;
+            }
+            set
+            {
+
+            }
         }
     }
 }

@@ -1,39 +1,42 @@
 using UnityEngine;
 
-[System.Serializable]
-public struct TPAudioVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public AudioClip Value;
-
-    public string GetVariableTypeName()
+    [System.Serializable]
+    public struct TPAudioVariable : TPVariableType
     {
-        return "AudioClip";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return null;
-    }
+        [SerializeField] public AudioClip Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "AudioClip";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return null;
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = (AudioClip)new_value;
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = (AudioClip)new_value;
+        }
     }
 }

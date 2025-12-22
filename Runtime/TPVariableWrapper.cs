@@ -1,8 +1,11 @@
 using UnityEngine;
 
-[System.Serializable]
-public class TPVariableWrapper : MonoBehaviour
+namespace TileProperties
 {
-    [SerializeReference]
-    public TPVariableType Variable;
+    [System.Serializable]
+    public class TPVariableWrapper : MonoBehaviour
+    {
+        [SerializeReference]
+        public TPVariableType Variable;
+    }
 }

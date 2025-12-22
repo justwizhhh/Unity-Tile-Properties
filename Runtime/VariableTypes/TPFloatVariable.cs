@@ -1,40 +1,43 @@
 using System;
 using UnityEngine;
 
-[System.Serializable]
-public struct TPFloatVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public float Value;
-
-    public string GetVariableTypeName()
+    [System.Serializable]
+    public struct TPFloatVariable : TPVariableType
     {
-        return "Float";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return 0.0f;
-    }
+        [SerializeField] public float Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "Float";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return 0.0f;
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = Convert.ToSingle(new_value);
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = Convert.ToSingle(new_value);
+        }
     }
 }

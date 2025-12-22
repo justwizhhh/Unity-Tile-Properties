@@ -1,16 +1,19 @@
-public interface TPVariableType
+namespace TileProperties
 {
-    // Editor information
-    
-    public string GetVariableTypeName();
+    public interface TPVariableType
+    {
+        // Editor information
 
-    public object GetDefaultValue();
+        public string GetVariableTypeName();
 
-    // Variable information
+        public object GetDefaultValue();
 
-    public string GetVariableName();
-    public void SetVariableName(string new_name);
+        // Variable information
 
-    public object GetValue();
-    public void SetValue(object new_value);
+        public string GetVariableName();
+        public void SetVariableName(string new_name);
+
+        public object GetValue();
+        public void SetValue(object new_value);
+    }
 }

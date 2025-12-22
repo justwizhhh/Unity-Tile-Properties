@@ -1,40 +1,43 @@
 using System;
 using UnityEngine;
 
-[System.Serializable]
-public struct TPBoolVariable : TPVariableType
+namespace TileProperties
 {
-    [SerializeField] public string VariableName;
-
-    [SerializeField] public bool Value;
-
-    public string GetVariableTypeName()
+    [System.Serializable]
+    public struct TPBoolVariable : TPVariableType
     {
-        return "Boolean";
-    }
+        [SerializeField] public string VariableName;
 
-    public object GetDefaultValue()
-    {
-        return false;
-    }
+        [SerializeField] public bool Value;
 
-    public string GetVariableName()
-    {
-        return VariableName;
-    }
+        public string GetVariableTypeName()
+        {
+            return "Boolean";
+        }
 
-    public void SetVariableName(string new_name)
-    {
-        VariableName = new_name;
-    }
+        public object GetDefaultValue()
+        {
+            return false;
+        }
 
-    public object GetValue()
-    {
-        return Value;
-    }
+        public string GetVariableName()
+        {
+            return VariableName;
+        }
 
-    public void SetValue(object new_value)
-    {
-        Value = Convert.ToBoolean(new_value);
+        public void SetVariableName(string new_name)
+        {
+            VariableName = new_name;
+        }
+
+        public object GetValue()
+        {
+            return Value;
+        }
+
+        public void SetValue(object new_value)
+        {
+            Value = Convert.ToBoolean(new_value);
+        }
     }
 }
