@@ -122,7 +122,7 @@ namespace TileProperties
             tile_properties.onAddDropdownCallback = (Rect button_rect, ReorderableList list) =>
             {
                 var menu = new GenericMenu();
-                var guids = AssetDatabase.FindAssets("", new[] { "Assets/Scripts/TileProperties/VariableTypes" });
+                var guids = AssetDatabase.FindAssets("", new[] { "Packages/com.justwizhhh.tile-properties/Runtime/VariableTypes" });
                 foreach (var guid in guids)
                 {
                     var path = AssetDatabase.GUIDToAssetPath(guid);
