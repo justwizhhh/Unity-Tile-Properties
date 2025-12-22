@@ -297,3 +297,4 @@ namespace TileProperties
         }
     }
 }
+#endif
