@@ -95,7 +95,7 @@ namespace TileProperties
                 float icon_padding = (lineHeight * 2) + 5;
                 GUI.DrawTexture(
                     new Rect(rect.x, rect.y + 4, lineHeight * 2, lineHeight * 2),
-                    (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Gizmos/TileProperty Icon.png", typeof(Texture2D)),
+                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/Gizmos/TileProperty Icon.png", typeof(Texture2D)),
                     ScaleMode.ScaleToFit);
 
                 // Set up default values for how much space a tile property should take up in the list
@@ -224,7 +224,7 @@ namespace TileProperties
             {
                 Handles.BeginGUI();
 
-                Texture2D texture_icon = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Gizmos/TilePropertyPreview Icon.png");
+                Texture2D texture_icon = AssetDatabase.LoadAssetAtPath<Texture2D>("Packages/com.justwizhhh.tile-properties/Editor/Gizmos/TilePropertyPreview Icon.png");
 
                 foreach (var tile in affected_tile_objects)
                 {
@@ -277,7 +277,7 @@ namespace TileProperties
             // Update gizmo for affected tiles preview
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label(
-                (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Gizmos/TilePropertyPreviewToggle Icon.png", typeof(Texture2D)),
+                (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/Gizmos/TilePropertyPreviewToggle Icon.png", typeof(Texture2D)),
                 GUILayout.Width(32), GUILayout.Height(32));
             EditorGUILayout.LabelField(
                 "Display Affected Tiles in Scene View",
@@ -297,4 +297,3 @@ namespace TileProperties
         }
     }
 }
-#endif
