@@ -3,7 +3,7 @@ using UnityEngine;
 namespace TileProperties
 {
     [System.Serializable]
-    public struct TPTextureVariable : TPVariableType
+    internal struct TPTextureVariable : ITPVariableType
     {
         [SerializeField] public string VariableName;
 

@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace TileProperties
 {
-    public struct TPGameObjectVariable : TPVariableType
+    [System.Serializable]
+    internal struct TPGameObjectVariable : ITPVariableType
     {
         [SerializeField] public string VariableName;
 

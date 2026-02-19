@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace TileProperties
 {
-    public struct TPStringVariable : TPVariableType
+    [System.Serializable]
+    internal struct TPStringVariable : ITPVariableType
     {
         [SerializeField] public string VariableName;
 
@@ -36,7 +37,7 @@ namespace TileProperties
 
         public void SetValue(object new_value)
         {
-            Value = Convert.ToString(new_value);
+            Value = (string)new_value;
         }
     }
 }

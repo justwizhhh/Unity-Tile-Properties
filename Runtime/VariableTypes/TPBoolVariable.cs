@@ -4,7 +4,7 @@ using UnityEngine;
 namespace TileProperties
 {
     [System.Serializable]
-    public struct TPBoolVariable : TPVariableType
+    internal struct TPBoolVariable : ITPVariableType
     {
         [SerializeField] public string VariableName;
 
@@ -37,7 +37,7 @@ namespace TileProperties
 
         public void SetValue(object new_value)
         {
-            Value = Convert.ToBoolean(new_value);
+            Value = (bool)new_value;
         }
     }
 }
