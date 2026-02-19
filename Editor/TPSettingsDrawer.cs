@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
-namespace TileProperties
+namespace TileProperties.Editor
 {
     [InitializeOnLoad]
     internal static class TPSettingsDrawer

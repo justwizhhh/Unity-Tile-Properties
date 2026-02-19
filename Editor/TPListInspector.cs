@@ -8,10 +8,10 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace TileProperties
+namespace TileProperties.Editor
 {
     [CustomEditor(typeof(TilePropertiesList))]
-    public class TPListInspector : Editor
+    public class TPListInspector : UnityEditor.Editor
     {
         // ------------------------------------
         //
@@ -167,7 +167,7 @@ namespace TileProperties
                 float icon_size = line_height * 2;
                 GUI.DrawTexture(
                     new Rect(rect.x + 4, rect.y + 4, icon_size, icon_size),
-                    (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Editor/Icons/TileProperty Icon.png", typeof(Texture2D)),
+                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/TileProperty Icon.png", typeof(Texture2D)),
                     ScaleMode.ScaleToFit);
 
                 // Set up default values for how much space a tile property should take up in the list editor
@@ -219,7 +219,7 @@ namespace TileProperties
             tile_properties.onAddDropdownCallback = (Rect button_rect, ReorderableList list) =>
             {
                 var menu = new GenericMenu();
-                var guids = AssetDatabase.FindAssets("", new[] { "Assets/Scripts/TileProperties/VariableTypes" });
+                var guids = AssetDatabase.FindAssets("", new[] { "Packages/com.justwizhhh.tile-properties/Runtime/VariableTypes" });
                 foreach (var guid in guids)
                 {
                     var path = AssetDatabase.GUIDToAssetPath(guid);

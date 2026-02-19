@@ -6,10 +6,10 @@ using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace TileProperties
+namespace TileProperties.Editor
 {
     [CustomEditor(typeof(TilePropertySettings))]
-    public class TPSettingsInspector : Editor
+    public class TPSettingsInspector : UnityEditor.Editor
     {
         // ------------------------------------
         //
