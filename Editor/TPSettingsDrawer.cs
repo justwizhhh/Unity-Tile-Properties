@@ -160,7 +160,7 @@ namespace TileProperties.Editor
                 if (default_texture_icon == null)
                 {
                     default_texture_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                        "Assets/Editor/Icons/TilePropertyPreview Icon.png");
+                        "Packages/com.justwizhhh.tile-properties/Editor/TilePropertyPreview Icon.png");
                 }
 
                 // Render a gizmo icon for each and every tile position retrieved from "UpdateTileObjectRefs()"

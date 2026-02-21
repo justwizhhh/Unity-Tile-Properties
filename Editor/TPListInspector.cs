@@ -26,11 +26,17 @@ namespace TileProperties.Editor
         private ReorderableList tile_properties;
 
         private int control_id;
+        static bool icon_assigned;
 
         private struct NewPropertyParams
         {
             public string Name;
             public string Path;
+        }
+
+        static TPListInspector()
+        {
+            EditorApplication.delayCall += AssignSOIcon;
         }
 
         public void OnEnable()
@@ -333,6 +339,29 @@ namespace TileProperties.Editor
 
             serializedObject.ApplyModifiedProperties();
             EditorUtility.SetDirty(target);
+        }
+
+        // --------------------------------------------
+        //
+        // Assign a custom icon to every SO instance of a tile property list
+        //
+        // --------------------------------------------
+
+        static void AssignSOIcon()
+        {
+            if (!icon_assigned)
+            {
+                var list_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertiesList Icon.png");
+
+                if (list_icon != null)
+                {
+                    var list_monoscript = MonoScript.FromScriptableObject(CreateInstance<TilePropertiesList>());
+                    EditorGUIUtility.SetIconForObject(list_monoscript, list_icon);
+
+                    icon_assigned = true;
+                }
+            }
         }
     }
 }

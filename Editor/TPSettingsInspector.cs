@@ -25,6 +25,13 @@ namespace TileProperties.Editor
         private static Texture2D disable_button_icon;
         private static Texture2D build_button_icon;
 
+        static bool icon_assigned;
+
+        static TPSettingsInspector()
+        {
+            EditorApplication.delayCall += AssignSOIcon;
+        }
+
         private void OnEnable()
         {
             settings_prop = serializedObject.FindProperty("SettingsEntries");
@@ -83,7 +90,7 @@ namespace TileProperties.Editor
                 float icon_size = line_height * 2;
                 GUI.DrawTexture(
                     new Rect(visible_rect.xMax + 6, rect.y + 2, icon_size, icon_size),
-                    (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Editor/Icons/TilePropertiesList Icon.png", typeof(Texture2D)),
+                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/TilePropertiesList Icon.png", typeof(Texture2D)),
                     ScaleMode.ScaleToFit);
 
                 // Draw all other properties for settings entry
@@ -154,13 +161,13 @@ namespace TileProperties.Editor
             if (enable_button_icon == null)
             {
                 enable_button_icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Assets/Editor/Icons/TilePropertyEnablePreview Icon.png", typeof(Texture2D));
+                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertyEnablePreview Icon.png", typeof(Texture2D));
             }
             GUIContent enable_button = new GUIContent("Enable All Previews", enable_button_icon);
             if (disable_button_icon == null)
             {
                 disable_button_icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Assets/Editor/Icons/TilePropertyDisablePreview Icon.png", typeof(Texture2D));
+                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertyDisablePreview Icon.png", typeof(Texture2D));
             }
             GUIContent disable_button = new GUIContent("Disable All Previews", disable_button_icon);
 
@@ -181,7 +188,7 @@ namespace TileProperties.Editor
             if (build_button_icon == null)
             {
                 build_button_icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Assets/Editor/Icons/TilePropertyAddressable Icon.png", typeof(Texture2D));
+                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertyAddressable Icon.png", typeof(Texture2D));
             }
             GUIContent build_button = new GUIContent("Build All Tile Property Files", build_button_icon);
             EditorStyles.label.wordWrap = true;
@@ -279,6 +286,29 @@ namespace TileProperties.Editor
             else
             {
                 Debug.LogError("No tile property lists can be found to build addressable groups for in this project!");
+            }
+        }
+
+        // --------------------------------------------
+        //
+        // Assign a custom icon to every SO instance of a tile property list
+        //
+        // --------------------------------------------
+
+        static void AssignSOIcon()
+        {
+            if (!icon_assigned)
+            {
+                var settings_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertySettings Icon.png");
+
+                if (settings_icon != null)
+                {
+                    var settings_monoscript = MonoScript.FromScriptableObject(CreateInstance<TilePropertySettings>());
+                    EditorGUIUtility.SetIconForObject(settings_monoscript, settings_icon);
+
+                    icon_assigned = true;
+                }
             }
         }
     }
