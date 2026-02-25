@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28140c5d3732fa048be87f337c1a1e0e, type: 3}
+  m_Name: TPSample_DebugSettings
+  m_EditorClassIdentifier: 
+  SettingsEntries:
+  - IsVisible: 1
+    PropertyList: {fileID: 11400000, guid: f0d42e8fcecbf7d4695c7d7d4ef86323, type: 2}
+    DebugIcon: {fileID: 0}
+    DebugColor: {r: 1, g: 0.46855342, b: 0.46855342, a: 1}
+  - IsVisible: 1
+    PropertyList: {fileID: 11400000, guid: 94f4ae45795c3e54685f410251ad58bd, type: 2}
+    DebugIcon: {fileID: 0}
+    DebugColor: {r: 1, g: 0.975188, b: 0.50628924, a: 1}
+  - IsVisible: 1
+    PropertyList: {fileID: 11400000, guid: b6518cc7c39bc0840bf8546af25efacd, type: 2}
+    DebugIcon: {fileID: 0}
+    DebugColor: {r: 0.53144646, g: 0.7244572, b: 1, a: 1}

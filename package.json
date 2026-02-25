@@ -12,5 +12,12 @@
     "author": {
       "name": "Dominik 'justwiz' Heiler",
       "url": "https://www.dominik-justwiz.co.uk/"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Tile Properties Demo",
+            "description": "Contains basic demonstration of using Tile Property Lists in the scene view and in script.",
+            "path": "Samples~/DemoScene"
+        }
+    ]
 }

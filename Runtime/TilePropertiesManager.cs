@@ -226,18 +226,23 @@ namespace TileProperties
         /// </summary>
         /// <param name="tile"> The tile object reference from a Tilemap. </param>
         /// <param name="property_name"> The name of the property to search the property list(s) for. </param>
+        /// <param name="property_type"> The variable type of the property to search the property list(s) for. </param>
         /// <param name="throw_on_tile_find"> Should this throw an error log if no tile can be found with this property? </param>
         /// <param name="throw_on_property_find"> Should this throw an error log if no property can be found in the list attached to this tile? </param>
-        public object GetTileProperty(TileBase tile, string property_name, 
+        public object GetTileProperty(TileBase tile, string property_name, Type property_type,
             bool throw_on_tile_find = false, bool throw_on_property_find = false)
         {
             TilePropertiesList included_list = null;
             DoesTileExistWithProperty(tile, ref included_list, throw_on_tile_find);
             if (included_list != null)
             {
-                return _getTileProperty(included_list, property_name, throw_on_property_find);
+                return _getTileProperty(included_list, property_name, property_type, throw_on_property_find);
             }
 
+            if (property_type.IsValueType)
+            {
+                return Activator.CreateInstance(property_type);
+            }
             return null;
         }
 
@@ -246,18 +251,23 @@ namespace TileProperties
         /// </summary>
         /// <param name="property_list_name"> The name of a 'TilePropertiesList' ScriptableObject in the Editor. </param>
         /// <param name="property_name"> The name of the property to search the current property list for. </param>
+        /// <param name="property_type"> The variable type of the property to search the property list(s) for. </param>
         /// <param name="throw_on_list_find"> Should this throw an error log if no list can be found with this name? </param>
         /// <param name="throw_on_property_find"> Should this throw an error log if no property can be found in the list attached to this tile? </param>
-        public object GetTileProperty(string property_list_name, string property_name,
+        public object GetTileProperty(string property_list_name, string property_name, Type property_type,
             bool throw_on_list_find = false, bool throw_on_property_find = false)
         {
             TilePropertiesList included_list = null;
             DoesTilePropertyListExist(property_list_name, ref included_list, throw_on_list_find);
             if (included_list != null)
             {
-                return _getTileProperty(included_list, property_name, throw_on_property_find);
+                return _getTileProperty(included_list, property_name, property_type, throw_on_property_find);
             }
 
+            if (property_type.IsValueType)
+            {
+                return Activator.CreateInstance(property_type);
+            }
             return null;
         }
 
@@ -408,7 +418,7 @@ namespace TileProperties
         // 'TileProperties' modifying functions
         // ====================================
 
-        private object _getTileProperty(TilePropertiesList included_list, string property_name,
+        private object _getTileProperty(TilePropertiesList included_list, string property_name, Type property_type,
             bool throw_on_property_find)
         {
             ITPVariableType property = included_list.TileProperties.Find(x => x.GetVariableName() == property_name);
@@ -423,6 +433,10 @@ namespace TileProperties
                     Debug.LogError("Property of name '" + property_name + "' does not exist in this list!");
                 }
 
+                if (property_type.IsValueType)
+                {
+                    return Activator.CreateInstance(property_type);
+                }
                 return null;
             }
         }
