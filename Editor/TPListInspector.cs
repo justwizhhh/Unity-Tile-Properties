@@ -10,6 +10,7 @@ using UnityEngine.Tilemaps;
 
 namespace TileProperties.Editor
 {
+    [InitializeOnLoad]
     [CustomEditor(typeof(TilePropertiesList))]
     public class TPListInspector : UnityEditor.Editor
     {

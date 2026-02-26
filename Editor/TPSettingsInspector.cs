@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace TileProperties.Editor
 {
+    [InitializeOnLoad]
     [CustomEditor(typeof(TilePropertySettings))]
     public class TPSettingsInspector : UnityEditor.Editor
     {

@@ -1,23 +1,40 @@
 {
-    "name": "com.justwizhhh.tile-properties",
-    "version": "1.0.0",
-    "displayName": "Tile Properties",
-    "description": "This is an example package",
-    "unity": "6000.1",
-    "keywords": [
-      "keyword1",
-      "keyword2",
-      "keyword3"
-    ],
-    "author": {
-      "name": "Dominik 'justwiz' Heiler",
-      "url": "https://www.dominik-justwiz.co.uk/"
-    },
-    "samples": [
-        {
-            "displayName": "Tile Properties Demo",
-            "description": "Contains basic demonstration of using Tile Property Lists in the scene view and in script.",
-            "path": "Samples~/DemoScene"
-        }
-    ]
+  "name": "com.justwizhhh.tile-properties",
+  "version": "1.0.0",
+  "displayName": "Tile Properties",
+  "description": "A dynamic and editor-friendly metadata system for 2D tilemap tiles in Unity 6.",
+  "unity": "6000.1",
+  "keywords": [
+    "tilemap",
+    "tile",
+    "tileset",
+    "metadata",
+    "property",
+    "api",
+    "2d",
+    "gizmo"
+  ],
+  "dependencies": {
+    "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.2d.tilemap.extras": "4.3.1",
+    "com.unity.addressables": "2.6.0"
+  },
+
+  "author": {
+    "name": "Dominik 'justwiz' Heiler",
+    "url": "https://www.dominik-justwiz.co.uk/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:justwizhhh/Unity-Tile-Properties.git"
+  },
+
+  "samples": [
+    {
+      "displayName": "Tile Properties Demo",
+      "description": "Contains basic demonstration of using Tile Property Lists in the scene view and in script.",
+      "path": "Samples~/DemoScene"
+    }
+  ],
+  "_fingerprint": "114e68e943888fb7199d36537b258c1d33b249c7"
 }
