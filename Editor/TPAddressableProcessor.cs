@@ -8,7 +8,6 @@ using UnityEngine;
 
 namespace TileProperties
 {
-    [InitializeOnLoad]
     internal class TPAddressableProcessor : AssetPostprocessor
     {
         // --------------------------------------------
@@ -30,10 +29,8 @@ namespace TileProperties
             AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.GetSettings(true);
             if (settings != null)
             {
-                string[] allAssets = importedAssets.Concat(movedAssets).ToArray();
-                
                 // If this is a Tile Property List, mark it so that it can be added to an addressable group later
-                foreach (var asset_path in allAssets)
+                foreach (var asset_path in importedAssets)
                 {
                     var obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(asset_path);
                     if (obj != null)
