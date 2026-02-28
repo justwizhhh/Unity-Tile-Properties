@@ -70,7 +70,7 @@ namespace TileProperties
             }
             else
             {
-                Debug.LogError("No tile property lists can be found! Have you assigned/built your lists with the correct group/label?");
+                Debug.LogError("No tile property lists can be found! Make sure you have assigned/built your lists with the correct group/label, and that you have called the function once all property lists have been loaded in!");
                 included_list = null;
                 return false;
             }

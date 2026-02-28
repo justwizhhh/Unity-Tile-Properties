@@ -35,7 +35,9 @@ namespace TileProperties
                     var obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(asset_path);
                     if (obj != null)
                     {
-                        if (obj is TilePropertiesList)
+                        // This might not be safe code, but other type-checking methods did not work here :/
+                        if (obj is TilePropertiesList ||
+                            obj.GetType().ToString() == "TileProperties.TilePropertiesList")
                         {
                             addressable_assignees.Add(Tuple.Create(asset_path, obj.name));
                             CreateSettingsFile(asset_path);
