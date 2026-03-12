@@ -1,8 +1,4 @@
-using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.AddressableAssets;
-using UnityEditor.AddressableAssets.Settings;
-using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -24,7 +20,6 @@ namespace TileProperties.Editor
 
         private static Texture2D enable_button_icon;
         private static Texture2D disable_button_icon;
-        private static Texture2D build_button_icon;
 
         static bool icon_assigned;
 
@@ -185,21 +180,6 @@ namespace TileProperties.Editor
 
             GUILayout.Space(16);
 
-            // Build addressable buttons
-            if (build_button_icon == null)
-            {
-                build_button_icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertyAddressable Icon.png", typeof(Texture2D));
-            }
-            GUIContent build_button = new GUIContent("Build All Tile Property Files", build_button_icon);
-            EditorStyles.label.wordWrap = true;
-            EditorGUILayout.LabelField("Use the button below to update the addressable groups for your tile property lists, every time you change/update them!");
-            GUILayout.Space(4);
-            if (GUILayout.Button(build_button))
-            {
-                BuildAddressables();
-            }
-
             serializedObject.ApplyModifiedProperties();
             EditorUtility.SetDirty(target);
         }
@@ -245,48 +225,6 @@ namespace TileProperties.Editor
             else
             {
                 Debug.LogWarning("No property list previews can be found to disable!");
-            }
-        }
-
-        private void BuildAddressables()
-        {
-            string[] tile_properties = AssetDatabase.FindAssets("t:TilePropertiesList");
-            Debug.Log(tile_properties.Length);
-            if (tile_properties.Length != 0)
-            {
-                // Automatically build the addressable assets for every Tile Property List in the project, and only for those assets
-                var build_settings = AddressableAssetSettingsDefaultObject.Settings;
-                var original_group_states = new Dictionary<AddressableAssetGroup, bool>();
-
-                foreach (AddressableAssetGroup group in build_settings.groups)
-                {
-                    var group_schema = group.GetSchema<BundledAssetGroupSchema>();
-                    if (group_schema != null)
-                    {
-                        original_group_states[group] = group_schema.IncludeInBuild;
-                        group_schema.IncludeInBuild = group.name == TPAddressableProcessor.addressable_group_name;
-
-                        EditorUtility.SetDirty(group_schema);
-                    }
-                }
-
-                AddressableAssetSettings.BuildPlayerContent();
-
-                // Reset all other addressable groups to be "build-able" again
-                foreach (var state_value in original_group_states)
-                {
-                    var group_schema = state_value.Key.GetSchema<BundledAssetGroupSchema>();
-                    if (group_schema != null)
-                    {
-                        group_schema.IncludeInBuild = state_value.Value;
-
-                        EditorUtility.SetDirty(group_schema);
-                    }
-                }
-            }
-            else
-            {
-                Debug.LogError("No tile property lists can be found to build addressable groups for in this project!");
             }
         }
 

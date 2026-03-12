@@ -6,6 +6,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 
 namespace TileProperties.Editor
@@ -328,6 +329,27 @@ namespace TileProperties.Editor
                             list.AffectedTiles.Add(picked_tile);
 
                             TPSettingsDrawer.UpdateTileObjectRefs();
+                        }
+
+                        // Print warning if another TPList already stores a reference to this tile
+                        string[] tp_list_files = AssetDatabase.FindAssets("t:TilePropertiesList");
+                        if (tp_list_files.Length > 0)
+                        {
+                            foreach (string SOName in tp_list_files)
+                            {
+                                var SOpath = AssetDatabase.GUIDToAssetPath(SOName);
+                                var list = AssetDatabase.LoadAssetAtPath<TilePropertiesList>(SOpath);
+
+                                if (list.AffectedTiles.Contains(picked_tile))
+                                {
+                                    Debug.LogWarning("Tile reference is already being stored in another tile property list: " + list.name);
+                                    break;
+                                }
+                                else
+                                {
+                                    continue;
+                                }
+                            }
                         }
                     }
                 }
