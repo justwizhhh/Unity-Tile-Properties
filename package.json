@@ -16,10 +16,8 @@
   ],
   "dependencies": {
     "com.unity.2d.tilemap": "1.0.0",
-    "com.unity.2d.tilemap.extras": "4.3.1",
-    "com.unity.addressables": "2.6.0"
+    "com.unity.2d.tilemap.extras": "4.3.1"
   },
-
   "author": {
     "name": "Dominik 'justwiz' Heiler",
     "url": "https://www.dominik-justwiz.co.uk/"
@@ -28,7 +26,6 @@
     "type": "git",
     "url": "git@github.com:justwizhhh/Unity-Tile-Properties.git"
   },
-
   "samples": [
     {
       "displayName": "Tile Properties Demo",
@@ -36,5 +33,5 @@
       "path": "Samples~/DemoScene"
     }
   ],
-  "_fingerprint": "114e68e943888fb7199d36537b258c1d33b249c7"
+  "_fingerprint": "d22693beb31451a6dfb78b66e2b9757622f3aee8"
 }
