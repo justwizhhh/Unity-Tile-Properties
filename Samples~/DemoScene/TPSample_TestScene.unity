@@ -5413,6 +5413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeed7845a09058408297c8a15d7980e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TilePropertyLists:
+  - {fileID: 11400000, guid: f0d42e8fcecbf7d4695c7d7d4ef86323, type: 2}
+  - {fileID: 11400000, guid: 94f4ae45795c3e54685f410251ad58bd, type: 2}
+  - {fileID: 11400000, guid: b6518cc7c39bc0840bf8546af25efacd, type: 2}
 --- !u!1 &1032150375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,8 +5690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -1.9999847}
-  m_SizeDelta: {x: 320.27, y: 68.59}
+  m_AnchoredPosition: {x: -233.44, y: -1.9999847}
+  m_SizeDelta: {x: 333.38, y: 68.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1251725897
 MonoBehaviour:

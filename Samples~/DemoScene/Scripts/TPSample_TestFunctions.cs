@@ -38,14 +38,9 @@ namespace TileProperties
             current_tile_properties = FindFirstObjectByType<TilePropertiesManager>();
         }
 
-        private void Awake()
-        {
-
-        }
-
         public void Test1_ChangeTileProperty()
         {
-            if (current_tile_properties != null && current_tile_properties.PropertyListsLoaded)
+            if (current_tile_properties != null && current_tile_properties.AreListsNull())
             {
                 current_tile_properties.SetTileProperty(
                     Test1_AffectedTile,
@@ -56,7 +51,7 @@ namespace TileProperties
 
         public void Test2_ChangeTileProperty()
         {
-            if (current_tile_properties != null && current_tile_properties.PropertyListsLoaded)
+            if (current_tile_properties != null && current_tile_properties.AreListsNull())
             {
                 current_tile_properties.SetTileProperty(
                     Test2_AffectedTile,
@@ -67,7 +62,7 @@ namespace TileProperties
 
         public void Test3_AddAffectedTile()
         {
-            if (current_tile_properties != null && current_tile_properties.PropertyListsLoaded)
+            if (current_tile_properties != null && current_tile_properties.AreListsNull())
             {
                 current_tile_properties.AddAffectedTile(Test3_NewTile, Test3_PropertyList);
             }
@@ -75,7 +70,7 @@ namespace TileProperties
 
         public void Test4_RemoveAffectedTile()
         {
-            if (current_tile_properties != null && current_tile_properties.PropertyListsLoaded)
+            if (current_tile_properties != null && current_tile_properties.AreListsNull())
             {
                 current_tile_properties.RemoveAffectedTile(Test4_RemovedTile, Test4_PropertyList);
             }
@@ -83,7 +78,7 @@ namespace TileProperties
 
         public void Test5_WipeAllTileProperties()
         {
-            if (current_tile_properties != null && current_tile_properties.PropertyListsLoaded)
+            if (current_tile_properties != null && current_tile_properties.AreListsNull())
             {
                 foreach (string list_name in Test5_WipedPropertyListNames)
                 {
