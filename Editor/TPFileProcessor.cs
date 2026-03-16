@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TileProperties
 {
-    internal class TPAddressableProcessor : AssetPostprocessor
+    internal class TPFileProcessor : AssetPostprocessor
     {
         // --------------------------------------------
         //
@@ -11,15 +11,13 @@ namespace TileProperties
         //
         // --------------------------------------------
 
-        public static string addressable_group_name = "Tile Properties";
-
         static void OnPostprocessAllAssets(
             string[] importedAssets,
             string[] deletedAssets,
             string[] movedAssets,
             string[] movedFromAssetPaths)
         {
-            // If this is a Tile Property List, mark it so that it can be added to an addressable group later
+            // If a new Tile Property List has been created, create a TilePropertySettings object
             foreach (var asset_path in importedAssets)
             {
                 var obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(asset_path);

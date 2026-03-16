@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 namespace TileProperties
 {
@@ -21,6 +20,7 @@ namespace TileProperties
         //
         // ------------------------------------
 
+        /// <summary> Singleton instance of the manager object. </summary>
         public static TilePropertiesManager Instance { get; private set; }
 
         [SerializeReference]

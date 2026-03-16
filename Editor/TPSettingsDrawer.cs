@@ -11,6 +11,12 @@ namespace TileProperties.Editor
     [InitializeOnLoad]
     internal static class TPSettingsDrawer
     {
+        // ------------------------------------
+        //
+        // This object draws the gizmo icons for the currently-previewed Tile Property lists in the scene view, by iterating through all Affected Tiles and drawing icons for them.
+        //
+        // ------------------------------------
+
         private static List<TilePropertySettings> settings_objects = new List<TilePropertySettings>();
 
         private static List<List<List<Vector3>>> affected_tiles_pos = new List<List<List<Vector3>>>();

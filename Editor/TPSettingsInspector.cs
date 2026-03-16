@@ -150,7 +150,7 @@ namespace TileProperties.Editor
         {
             serializedObject.Update();
 
-            EditorGUILayout.LabelField("Preview icons for tile properties are rendered in list order (highest is rendered with top priority over everything else).");
+            EditorGUILayout.LabelField("Preview icons for tile properties are rendered in list order (highest is rendered first, with top priority over everything else).");
             settings_entries.DoLayoutList();
 
             // Enable/disable toggle buttons

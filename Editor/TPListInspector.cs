@@ -6,7 +6,6 @@ using System.Reflection;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 
 namespace TileProperties.Editor
@@ -314,7 +313,7 @@ namespace TileProperties.Editor
                         // Discard tile if it is not a generic "TileBase" object
                         else if (picked_tile is AutoTile)
                         {
-                            Debug.LogWarning("AutoTiles are not supported inside a Tile Property List! Please only use generic TileBase object references inside 'Affected Tiles'.");
+                            Debug.LogWarning("AutoTiles are not supported inside a Tile Property List! Please only use generic TileBase object references inside the 'Affected Tiles' list.");
                         }
                         else if (picked_tile is RuleTile 
                             || picked_tile is HexagonalRuleTile
@@ -322,7 +321,7 @@ namespace TileProperties.Editor
                             || picked_tile is RuleOverrideTile
                             || picked_tile is AdvancedRuleOverrideTile)
                         {
-                            Debug.LogWarning("Rule Tiles are not supported inside a Tile Property List! Please only use generic TileBase object references inside 'Affected Tiles'.");
+                            Debug.LogWarning("Rule Tiles are not supported inside a Tile Property List! Please only use generic TileBase object references inside the 'Affected Tiles' list.");
                         }
                         else
                         {
@@ -342,7 +341,7 @@ namespace TileProperties.Editor
 
                                 if (list.AffectedTiles.Contains(picked_tile))
                                 {
-                                    Debug.LogWarning("Tile reference is already being stored in another tile property list: " + list.name);
+                                    Debug.LogWarning("Tile reference is already being stored in another tile property list: " + list.name + "!");
                                     break;
                                 }
                                 else

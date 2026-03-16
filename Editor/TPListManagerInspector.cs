@@ -7,6 +7,12 @@ namespace TileProperties.Editor
     [CustomEditor(typeof(TilePropertiesManager))]
     public class TPListManagerInspector : UnityEditor.Editor
     {
+        // ------------------------------------
+        //
+        // Editor interface class for all Tile Property Manager objects that get used in a scene
+        //
+        // ------------------------------------
+
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
