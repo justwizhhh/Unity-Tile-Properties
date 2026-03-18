@@ -1,3 +1,5 @@
+<img width="1820" height="340" alt="TilePropertiesLogo_Bannerr" src="https://github.com/user-attachments/assets/ba71af75-a413-43d6-b242-29b5f4a301ec" />
+
 # Tile Properties - A dynamic and editor-friendly metadata plugin for 2D tilemap tiles in Unity 6.
 
 
