@@ -24,7 +24,7 @@
  - Click the `Add` button
 
 # Documentation
-For more information on how to use the plugin, see the package's included sample scene, or consult the documentation website: [https://github.com/justwizhhh/Unity-Tile-Properties-Docs](https://justwizhhh.github.io/Unity-Tile-Properties-Docs/)
+For more information on how to use the plugin, see the package's included sample scene, or consult the documentation website: [https://justwizhhh.github.io/Unity-Tile-Properties-Docs/](https://justwizhhh.github.io/Unity-Tile-Properties-Docs/)
 
 # Misc. Info
 
