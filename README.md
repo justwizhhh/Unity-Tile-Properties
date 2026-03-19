@@ -13,6 +13,8 @@
  - A variety of tools and functions to access these tile properties through the inspector and through code as well
  - Integrated inspector tools and gizmo-based displays for debugging 
 
+<img width="1919" height="988" alt="exampleScreenshot1" src="https://github.com/user-attachments/assets/c0d46624-de42-4f0c-bf01-35ac8b57dc3f" />
+
 # How to Install (through a Git link)
 
  - Open `Window > Package Manager`
@@ -22,7 +24,7 @@
  - Click the `Add` button
 
 # Documentation
-For more information on how to use the plugin, see the package's included sample scene, or consult the documentation website: https://github.com/justwizhhh/Unity-Tile-Properties-Docs
+For more information on how to use the plugin, see the package's included sample scene, or consult the documentation website: [https://github.com/justwizhhh/Unity-Tile-Properties-Docs](https://justwizhhh.github.io/Unity-Tile-Properties-Docs/)
 
 # Misc. Info
 
