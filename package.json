@@ -1,7 +1,7 @@
 {
   "name": "com.justwiz.tile-properties",
   "version": "1.0.0",
-  "displayName": "Tile Properties - Dynamic Tilemap Metadata System",
+  "displayName": "Tile Properties",
   "description": "A dynamic and editor-friendly metadata system for 2D tilemap tiles in Unity 6.",
   "unity": "6000.1",
   "documentationUrl": "https://justwizhhh.github.io/Unity-Tile-Properties-Docs/",
