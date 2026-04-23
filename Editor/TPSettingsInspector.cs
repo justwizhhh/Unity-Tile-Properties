@@ -86,7 +86,7 @@ namespace justWiz.TileProperties.Editor
                 float icon_size = line_height * 2;
                 GUI.DrawTexture(
                     new Rect(visible_rect.xMax + 6, rect.y + 2, icon_size, icon_size),
-                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/Icons/TilePropertiesList Icon.png", typeof(Texture2D)),
+                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwiz.tile-properties/Editor/Icons/TilePropertiesList Icon.png", typeof(Texture2D)),
                     ScaleMode.ScaleToFit);
 
                 // Draw all other properties for settings entry
@@ -157,13 +157,13 @@ namespace justWiz.TileProperties.Editor
             if (enable_button_icon == null)
             {
                 enable_button_icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Packages/com.justwizhhh.tile-properties/Editor/Icons/TilePropertyEnablePreview Icon.png", typeof(Texture2D));
+                    "Packages/com.justwiz.tile-properties/Editor/Icons/TilePropertyEnablePreview Icon.png", typeof(Texture2D));
             }
             GUIContent enable_button = new GUIContent("Enable All Previews", enable_button_icon);
             if (disable_button_icon == null)
             {
                 disable_button_icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-                    "Packages/com.justwizhhh.tile-properties/Editor/Icons/TilePropertyDisablePreview Icon.png", typeof(Texture2D));
+                    "Packages/com.justwiz.tile-properties/Editor/Icons/TilePropertyDisablePreview Icon.png", typeof(Texture2D));
             }
             GUIContent disable_button = new GUIContent("Disable All Previews", disable_button_icon);
 
@@ -239,7 +239,7 @@ namespace justWiz.TileProperties.Editor
             if (!icon_assigned)
             {
                 var settings_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/com.justwizhhh.tile-properties/Editor/Icons/TilePropertySettings Icon.png");
+                    "Packages/com.justwiz.tile-properties/Editor/Icons/TilePropertySettings Icon.png");
 
                 if (settings_icon != null)
                 {
