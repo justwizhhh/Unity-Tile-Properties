@@ -1,12 +1,16 @@
 {
-  "name": "com.justwizhhh.tile-properties",
+  "name": "com.justwiz.tile-properties",
   "version": "1.0.0",
-  "displayName": "Tile Properties",
+  "displayName": "Tile Properties - Dynamic Tilemap Metadata System",
   "description": "A dynamic and editor-friendly metadata system for 2D tilemap tiles in Unity 6.",
   "unity": "6000.1",
+  "documentationUrl": "https://justwizhhh.github.io/Unity-Tile-Properties-Docs/",
   "keywords": [
     "tilemap",
     "tile",
+    "tiles",
+    "properties",
+    "property",
     "tileset",
     "metadata",
     "property",
@@ -19,7 +23,7 @@
     "com.unity.2d.tilemap.extras": "4.3.1"
   },
   "author": {
-    "name": "Dominik 'justwiz' Heiler",
+    "name": "Dominik 'justWiz' Heiler",
     "url": "https://www.dominik-justwiz.co.uk/"
   },
   "repository": {
@@ -33,5 +37,5 @@
       "path": "Samples~/DemoScene"
     }
   ],
-  "_fingerprint": "d5111a32ddf7a4061f6098af738e9c2af4dee5f7"
+  "_fingerprint": "8ebd30ae669054b3671901ade10a73087487c802"
 }

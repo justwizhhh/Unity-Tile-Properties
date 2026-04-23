@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     /// <summary>
     /// Scriptable object for changing how Tile Property Lists are previewed in the editor. <br/><br/>

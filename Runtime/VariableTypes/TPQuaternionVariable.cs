@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using UnityEngine;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     [System.Serializable]
     internal struct TPQuaternionVariable : ITPVariableType

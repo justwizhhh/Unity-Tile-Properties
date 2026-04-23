@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 668207f049a71e543a23de7c16903afc
+guid: 318eba14806677745af0aaca04fea7ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2369534357909495779
-    second: TilePropertyEnablePreview Icon_0
+      213: -585253033288966084
+    second: TilePropertyDisablePreview Icon_0
   - first:
-      213: -4029140352369646823
-    second: TilePropertyEnablePreview Icon_1
+      213: -4192556350410706823
+    second: TilePropertyDisablePreview Icon_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilePropertyEnablePreview Icon_0
+      name: TilePropertyDisablePreview Icon_0
       rect:
         serializedVersion: 2
         x: 4
@@ -144,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d10a8b94e09bd1fd0800000000000000
-      internalID: -2369534357909495779
+      spriteID: c30671f8773c0e7f0800000000000000
+      internalID: -585253033288966084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilePropertyEnablePreview Icon_1
+      name: TilePropertyDisablePreview Icon_1
       rect:
         serializedVersion: 2
         x: 12
         y: 4
         width: 17
-        height: 9
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 913a0d2623e9518c0800000000000000
-      internalID: -4029140352369646823
+      spriteID: 97036f0663c01d5c0800000000000000
+      internalID: -4192556350410706823
       vertices: []
       indices: 
       edges: []
@@ -186,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TilePropertyEnablePreview Icon_0: -2369534357909495779
-      TilePropertyEnablePreview Icon_1: -4029140352369646823
+      TilePropertyDisablePreview Icon_0: -585253033288966084
+      TilePropertyDisablePreview Icon_1: -4192556350410706823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

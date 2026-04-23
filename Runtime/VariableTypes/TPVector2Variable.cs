@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     [System.Serializable]
     internal struct TPVector2Variable : ITPVariableType

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
-namespace TileProperties.Editor
+namespace justWiz.TileProperties.Editor
 {
     [InitializeOnLoad]
     internal static class TPSettingsDrawer
@@ -166,7 +166,7 @@ namespace TileProperties.Editor
                 if (default_texture_icon == null)
                 {
                     default_texture_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                        "Packages/com.justwizhhh.tile-properties/Editor/TilePropertyPreview Icon.png");
+                        "Packages/com.justwizhhh.tile-properties/Editor/Icons/TilePropertyPreview Icon.png");
                 }
 
                 // Render a gizmo icon for each and every tile position retrieved from "UpdateTileObjectRefs()"

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     internal class TPVariableTypeRegistry
     {

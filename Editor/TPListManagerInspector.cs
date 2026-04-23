@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace TileProperties.Editor
+namespace justWiz.TileProperties.Editor
 {
     [InitializeOnLoad]
     [CustomEditor(typeof(TilePropertiesManager))]

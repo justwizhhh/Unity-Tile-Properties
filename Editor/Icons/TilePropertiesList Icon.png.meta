@@ -1,13 +1,34 @@
 fileFormatVersion: 2
-guid: c82ca4ed0d2a3ab43b6b6962eabb1fd9
+guid: 28891fae818ec23439879d3eb2bbb9b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2828228856772057949
-    second: TileProperty Icon_0
+      213: -4796763008532512421
+    second: TilePropertiesList Icon_0
   - first:
-      213: 705406344111061915
-    second: TileProperty Icon_1
+      213: -2823277295802761923
+    second: TilePropertiesList Icon_1
+  - first:
+      213: -4884409953883512937
+    second: TilePropertiesList Icon_2
+  - first:
+      213: -8619573739463940790
+    second: TilePropertiesList Icon_3
+  - first:
+      213: 6283892272380987057
+    second: TilePropertiesList Icon_4
+  - first:
+      213: 8151524346215977329
+    second: TilePropertiesList Icon_5
+  - first:
+      213: -992599152754948006
+    second: TilePropertiesList Icon_6
+  - first:
+      213: -4145731515983305258
+    second: TilePropertiesList Icon_7
+  - first:
+      213: -7668420691210009999
+    second: TilePropertiesList Icon_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -181,13 +202,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileProperty Icon_0
+      name: TilePropertiesList Icon_0
       rect:
         serializedVersion: 2
         x: 19
-        y: 27
-        width: 82
-        height: 82
+        y: 83
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a4a790e6dc10c8d0800000000000000
-      internalID: -2828228856772057949
+      spriteID: b518fa445797e6db0800000000000000
+      internalID: -4796763008532512421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileProperty Icon_1
+      name: TilePropertiesList Icon_1
       rect:
         serializedVersion: 2
-        x: 57
-        y: 15
-        width: 52
-        height: 64
+        x: 47
+        y: 83
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,8 +239,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9bfb03255b1ac900800000000000000
-      internalID: 705406344111061915
+      spriteID: d3d30410244b1d8d0800000000000000
+      internalID: -2823277295802761923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 83
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f14619607173cb0800000000000000
+      internalID: -4884409953883512937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_3
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 55
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4567f73a5f116880800000000000000
+      internalID: -8619573739463940790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 55
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6471e6abed43750800000000000000
+      internalID: 6283892272380987057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_5
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 15
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171d62a4438002170800000000000000
+      internalID: 8151524346215977329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_6
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 71
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5800bf54549932f0800000000000000
+      internalID: -992599152754948006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 27
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d56ca7b6276776c0800000000000000
+      internalID: -4145731515983305258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePropertiesList Icon_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 27
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1720c28a20c449590800000000000000
+      internalID: -7668420691210009999
       vertices: []
       indices: 
       edges: []
@@ -238,8 +413,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TileProperty Icon_0: -2828228856772057949
-      TileProperty Icon_1: 705406344111061915
+      TilePropertiesList Icon_0: -4796763008532512421
+      TilePropertiesList Icon_1: -2823277295802761923
+      TilePropertiesList Icon_2: -4884409953883512937
+      TilePropertiesList Icon_3: -8619573739463940790
+      TilePropertiesList Icon_4: 6283892272380987057
+      TilePropertiesList Icon_5: 8151524346215977329
+      TilePropertiesList Icon_6: -992599152754948006
+      TilePropertiesList Icon_7: -4145731515983305258
+      TilePropertiesList Icon_8: -7668420691210009999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

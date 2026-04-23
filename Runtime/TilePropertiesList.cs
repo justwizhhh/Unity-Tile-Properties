@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     /// <summary>
     /// A ScriptableObject which stores a list of tile property values (<see cref="ITPVariableType"/>), 

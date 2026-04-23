@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     internal class TPFileProcessor : AssetPostprocessor
     {

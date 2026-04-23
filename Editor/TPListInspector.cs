@@ -8,7 +8,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace TileProperties.Editor
+namespace justWiz.TileProperties.Editor
 {
     [InitializeOnLoad]
     [CustomEditor(typeof(TilePropertiesList))]
@@ -174,7 +174,7 @@ namespace TileProperties.Editor
                 float icon_size = line_height * 2;
                 GUI.DrawTexture(
                     new Rect(rect.x + 4, rect.y + 4, icon_size, icon_size),
-                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/TileProperty Icon.png", typeof(Texture2D)),
+                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwizhhh.tile-properties/Editor/Icons/TileProperty Icon.png", typeof(Texture2D)),
                     ScaleMode.ScaleToFit);
 
                 // Set up default values for how much space a tile property should take up in the list editor
@@ -234,14 +234,14 @@ namespace TileProperties.Editor
 
                     // Only show buttons for adding 'tile property' variables 
                     Assembly asm = typeof(ITPVariableType).Assembly;
-                    System.Type item_type = asm.GetType("TileProperties." + item_name);
+                    System.Type item_type = asm.GetType("justWiz.TileProperties." + item_name);
                     if (item_type == null)
                     {
                         continue;
                     }
 
                     // Populate the drop-down menu with an button to add this new variable type
-                    string item_display_name = item_type.ToString().Substring(17);
+                    string item_display_name = item_type.ToString().Substring(25);
                     item_display_name = item_display_name.Replace("Variable", "");
                     menu.AddItem(new GUIContent(item_display_name),
                         false, clickHandler,
@@ -267,7 +267,7 @@ namespace TileProperties.Editor
 
             // Assign default values to our new tile property variable
             Assembly asm = typeof(ITPVariableType).Assembly;
-            System.Type type = asm.GetType("TileProperties." + data.Name);
+            System.Type type = asm.GetType("justWiz.TileProperties." + data.Name);
             var new_list_entry = (ITPVariableType)System.Activator.CreateInstance(type);
             new_list_entry.SetVariableName("New" + new_list_entry.GetVariableTypeName());
             new_list_entry.SetValue(new_list_entry.GetDefaultValue());
@@ -339,7 +339,7 @@ namespace TileProperties.Editor
                                 var SOpath = AssetDatabase.GUIDToAssetPath(SOName);
                                 var list = AssetDatabase.LoadAssetAtPath<TilePropertiesList>(SOpath);
 
-                                if (list.AffectedTiles.Contains(picked_tile))
+                                if (list.AffectedTiles.Contains(picked_tile) && list != target)
                                 {
                                     Debug.LogWarning("Tile reference is already being stored in another tile property list: " + list.name + "!");
                                     break;
@@ -374,7 +374,7 @@ namespace TileProperties.Editor
             if (!icon_assigned)
             {
                 var list_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/com.justwizhhh.tile-properties/Editor/TilePropertiesList Icon.png");
+                    "Packages/com.justwizhhh.tile-properties/Editor/Icons/TilePropertiesList Icon.png");
 
                 if (list_icon != null)
                 {

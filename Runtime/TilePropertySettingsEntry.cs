@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     /// <summary>
     /// A struct that stores info about how a Tile Property List is viewed while a 'TilePropertySettings' object is open in the editor.

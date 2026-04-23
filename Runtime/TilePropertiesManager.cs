@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace TileProperties
+namespace justWiz.TileProperties
 {
     /// <summary>
     ///   Singleton object that keeps track of every tile property list in the game and passes property info to other objects. 
