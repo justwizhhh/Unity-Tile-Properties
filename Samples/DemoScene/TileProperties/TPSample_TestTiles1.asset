@@ -15,11 +15,11 @@ MonoBehaviour:
   AffectedTiles:
   - {fileID: 11400000, guid: 75c96c87752bc1e409e3752a425cedd0, type: 2}
   tileProperties:
-  - rid: 6414683427981230353
+  - rid: 6414683429225365774
   references:
     version: 2
     RefIds:
-    - rid: 6414683427981230353
+    - rid: 6414683429225365774
       type: {class: TPFloatVariable, ns: justWiz.TileProperties, asm: Assembly-CSharp}
       data:
         VariableName: TestFloat
