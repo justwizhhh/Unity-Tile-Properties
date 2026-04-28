@@ -5410,7 +5410,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 872936665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eeed7845a09058408297c8a15d7980e, type: 3}
+  m_Script: {fileID: 11500000, guid: 34edfe1480760ae4d9861d773a8f52fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TilePropertyLists:
@@ -6023,7 +6023,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Test 1 - Change value of "TestFloat" property
+  m_Text: Test 2 - Change value of "TestFloat" property
 --- !u!222 &1435672713
 CanvasRenderer:
   m_ObjectHideFlags: 0
