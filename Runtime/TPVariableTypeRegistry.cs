@@ -19,7 +19,6 @@ namespace justWiz.TileProperties
         { typeof(int), typeof(TPIntVariable) },
         { typeof(float), typeof(TPFloatVariable) },
         { typeof(bool), typeof(TPBoolVariable) },
-        { typeof(char), typeof(TPCharVariable) },
         { typeof(string), typeof(TPStringVariable) },
         { typeof(Vector2), typeof(TPVector2Variable) },
         { typeof(Vector2Int), typeof(TPVector2IntVariable) },

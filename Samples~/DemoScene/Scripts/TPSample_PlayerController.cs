@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
-using TileProperties;
+using justWiz.TileProperties;
 
 namespace TileProperties
 {

@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e0aa081a800ad4a87421fc1c09dfc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a0cd43da3b02184fb3b416c88ba71aa, type: 3}
   m_Name: TPSample_TestTiles3
   m_EditorClassIdentifier: 
   AffectedTiles:
   - {fileID: 11400000, guid: 5d9ac08d92c958348b0d5f47977775d2, type: 2}
   tileProperties:
-  - rid: 2016661038276018441
+  - rid: 6414683427119563019
   references:
     version: 2
     RefIds:
-    - rid: 2016661038276018441
-      type: {class: TPFloatVariable, ns: TileProperties, asm: TileProperties}
+    - rid: 6414683427119563019
+      type: {class: TPFloatVariable, ns: justWiz.TileProperties, asm: TileProperties}
       data:
         VariableName: TestFloat
         Value: 3
