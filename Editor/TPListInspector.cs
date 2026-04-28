@@ -174,7 +174,7 @@ namespace justWiz.TileProperties.Editor
                 float icon_size = line_height * 2;
                 GUI.DrawTexture(
                     new Rect(rect.x + 4, rect.y + 4, icon_size, icon_size),
-                    (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.justwiz.tile-properties/Editor/Icons/TileProperty Icon.png", typeof(Texture2D)),
+                    (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Third-Party/justWiz/TileProperties/Editor/Icons/TileProperty Icon.png", typeof(Texture2D)),
                     ScaleMode.ScaleToFit);
 
                 // Set up default values for how much space a tile property should take up in the list editor
@@ -226,7 +226,7 @@ namespace justWiz.TileProperties.Editor
             tile_properties.onAddDropdownCallback = (Rect button_rect, ReorderableList list) =>
             {
                 var menu = new GenericMenu();
-                var guids = AssetDatabase.FindAssets("", new[] { "Packages/com.justwiz.tile-properties/Runtime/VariableTypes" });
+                var guids = AssetDatabase.FindAssets("", new[] { "Assets/Third-Party/justWiz/TileProperties/Runtime/VariableTypes" });
                 foreach (var guid in guids)
                 {
                     var path = AssetDatabase.GUIDToAssetPath(guid);
@@ -374,7 +374,7 @@ namespace justWiz.TileProperties.Editor
             if (!icon_assigned)
             {
                 var list_icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/com.justwiz.tile-properties/Editor/Icons/TilePropertiesList Icon.png");
+                    "Assets/Third-Party/justWiz/TileProperties/Editor/Icons/TilePropertiesList Icon.png");
 
                 if (list_icon != null)
                 {
